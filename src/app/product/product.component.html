@@ -1,0 +1,26 @@
+<!-- <P>This is {{productName}} product with Id: {{productId}}</P> -->
+<!-- <P [ngStyle]="{'background-color' : 'orange'}">This is {{productName}} product with Id: {{getProductId()}}</P> -->
+<!-- <P [ngStyle]="{backgroundColor : 'orange'}">This is {{productName}} product with Id: {{getProductId()}}</P> -->
+<!-- <P [ngStyle]="{backgroundColor : getBgColor()}"
+    [ngClass]="{'text-white' : isProductAvailable === true}"> -->
+<P [ngStyle]="{backgroundColor : getBgColor()}"
+[ngClass]="{'text-white' : isProductAvailable, 'p-4' : isProductAvailable, 'p-2' : isProductAvailable === false}"
+
+>This is {{productName}} 
+    product with Id:{{getProductId()}}
+    <span *ngIf="isProductAvailable; else noProductAvail">Product is available</span>
+    <ng-template #noProductAvail>
+        <span>Product not available</span>
+    </ng-template>
+</P>
+<!-- property and methods can be called in above example -->
+<!-- above is string interpolationn >> {{propertyName}} -->
+<!-- below is property binding >> [html property]="ts property" -->
+<!-- <span [innerText]="productName"></span> -->
+<span [innerHTML]="productName"></span>
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <input type="text" [value]="'Samsung'" class="form-control mb-2">
+        <!-- above is property binding with string value  >> "'stringValue'"-->
+    </div>
+</div>

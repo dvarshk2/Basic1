@@ -1,0 +1,153 @@
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link" 
+        [class.active]="framework == 'angular'"
+        (click)="framework ='angular'"
+        >Angular</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [class.active]="framework == 'react'"
+        (click)="framework = 'react'"
+        >React</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [class.active]="framework == 'vue'"
+        (click)="framework ='vue'"
+        >Vue</a>
+    </li>
+</ul>
+<div [ngSwitch]="framework">
+    <div class="card" *ngSwitchCase="'angular'">
+        <div class="card-body">
+            <p>
+                <strong>Angular</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non esse repudiandae sequi minima voluptas laboriosam.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'react'">
+        <div class="card-body">
+            <p>
+                <strong>React</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non esse repudiandae sequi minima voluptas laboriosam.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'vue'">
+        <div class="card-body">
+            <p>
+                <strong>Vue</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non esse repudiandae sequi minima voluptas laboriosam.
+            </p>
+        </div>
+    </div>
+</div>
+<br><br><br><hr>
+
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [ngClass]="{active : skill === 'html5'}"
+        (click)="skill = 'html5'"
+        >HTML5</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [class.active]="skill === 'css3'"
+        (click)="skill = 'css3'"
+        >CSS3</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [ngClass]="{active: skill === 'javascript'}"
+        (click)="skill = 'javascript'"
+        >javaScript</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [class.active]="skill === 'scss'"
+        (click)="skill = 'scss'"
+        >SCSS</a>
+    </li>
+</ul>
+<br><hr><br>
+<div [ngSwitch]="skill">
+    <div class="card" *ngSwitchCase="'html5'">
+        <div class="card-body">
+            <p>
+                <strong>HTML5</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam numquam recusandae commodi saepe officiis veniam.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'css3'">
+        <div class="card-body">
+            <p>
+                <strong>CSS3</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam numquam recusandae commodi saepe officiis veniam.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'javascript'">
+        <div class="card-body">
+            <p>
+                <strong>javaScript</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam numquam recusandae commodi saepe officiis veniam.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'scss'">
+        <div class="card-body">
+            <p>
+                <strong>SASS</strong>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam numquam recusandae commodi saepe officiis veniam.
+            </p>
+        </div>
+    </div>
+</div>
+
+<br><br><br><hr>
+
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [class.active]="name === 'deepti'"
+        (click)="name ='deepti'"
+        >Deepti</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [ngClass]="{active: name ==='varshketu'}"
+        (click)="name = 'varshketu'"
+        >Varshketu</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"
+        [class.active]="name === 'hari'"
+        (click)="name = 'hari'"
+        >Hari</a>
+    </li>
+</ul>
+<div [ngSwitch]="name">
+    <div class="card" *ngSwitchCase="'varshketu'">
+        <div class="card-body">
+            <p>
+                <strong>Varshketu</strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dolore omnis voluptatibus incidunt itaque excepturi.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'hari'">
+        <div class="card-body">
+            <p>
+                <strong>Hari</strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dolore omnis voluptatibus incidunt itaque excepturi.
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'deepti'">
+        <div class="card-body">
+            <p>
+                <strong>Deepti</strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dolore omnis voluptatibus incidunt itaque excepturi.
+            </p>
+        </div>
+    </div>
+</div>
+<br><br><br><hr>
+

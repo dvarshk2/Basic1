@@ -1,0 +1,26 @@
+<ul class="form-group mb-4">
+    <li class="list-group-item"*ngFor='let skill of skills'>I Love {{skill}} </li>
+    <!-- <li class="list-group-item">I Love CSS3</li>
+    <li class="list-group-item">I Love typeScript</li>
+    <li class="list-group-item">I Love javaScript</li>
+    <li class="list-group-item">I Love Angular</li> -->
+</ul>
+
+<table class="table table-bordered mb-4">
+    <thead>
+        <th>Sr. No</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email ID</th>
+        <th>Contact</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of stdInfo; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{std.fname}}</td>
+            <td>{{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+        </tr>
+    </tbody>
+</table>
